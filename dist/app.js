@@ -97,7 +97,7 @@ class StateManager {
                 id: '1',
                 name: 'RTX 4090 Gaming Laptop',
                 price: 3299.99,
-                image: 'https://images.unsplash.com/photo-1588872657840-790ff3bde08c?w=500&h=500&fit=crop',
+                image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC2PXOJ9OuTPH0JNuFM_K8tM9jA2dFsneHDNTZH_ZrDwcfovhnC9tMJD302hqLj5sClvY6qD6RGJJCQSqkS_OUg3k39tnX_TOlGmon7Y7lNUFPc1LBoo2M4Hik2-k29RDnekdSCTnNwBLn-Yhvd0dNbZveOo0s_VD90sNAWCgcuE7ai6UiOrEd3_TmZ6GH8ecs7x6E3y3s6MhSjDYaZhHSWpi4MfzxBhYbov9hPnNw1w--6xg4hefuDcU5vVYhuvfCcfc_N5JRlxvQ',
                 category: 'laptops',
                 description: 'Ultimate gaming performance with RTX 4090',
                 rating: 4.8,
