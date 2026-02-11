@@ -21,6 +21,7 @@ export class Router {
         this.routes.set('home', { path: 'home', pageId: 'home-page' });
         this.routes.set('products', { path: 'products', pageId: 'products-page' });
         this.routes.set('product-detail', { path: 'product-detail', pageId: 'product-detail-page' });
+        this.routes.set('profile', { path: 'profile', pageId: 'profile-page' });
         this.routes.set('cart', { path: 'cart', pageId: 'cart-page' });
         this.routes.set('checkout', { path: 'checkout', pageId: 'checkout-page' });
     }
