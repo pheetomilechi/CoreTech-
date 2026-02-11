@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>CoreTech - PC Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+    <style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+
+<!-- Global Navigation/Header -->
+<header id="app-header" class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+    <div class="px-4 py-3 flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" data-navigate="home">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <span class="material-icons-round text-white text-xl">memory</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight">CORE<span class="text-primary">TECH</span></h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="p-2 rounded-full hover:bg-primary/10 transition-colors" data-navigate="profile">
+                    <span class="material-icons-round">person_outline</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-primary/10 transition-colors relative" data-navigate="cart">
+                    <span class="material-icons-round">shopping_bag</span>
+                    <span class="absolute top-1 right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white dark:border-background-dark" id="cart-count">3</span>
+                </button>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="relative" id="search-container">
+            <span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+            <input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search components, laptops..." type="text" id="search-input"/>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content Area -->
+<main class="pb-24">
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page active">
+        <!-- Hero Banner -->
+        <section class="px-4 py-4">
+            <div class="relative h-64 w-full rounded-2xl overflow-hidden shadow-xl shadow-primary/10">
+                <img class="absolute inset-0 w-full h-full object-cover" alt="Modern gaming laptop with RGB lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2PXOJ9OuTPH0JNuFM_K8tM9jA2dFsneHDNTZH_ZrDwcfovhnC9tMJD302hqLj5sClvY6qD6RGJJCQSqkS_OUg3k39tnX_TOlGmon7Y7lNUFPc1LBoo2M4Hik2-k29RDnekdSCTnNwBLn-Yhvd0dNbZveOo0s_VD90sNAWCgcuE7ai6UiOrEd3_TmZ6GH8ecs7x6E3y3s6MhSjDYaZhHSWpi4MfzxBhYbov9hPnNw1w--6xg4hefuDcU5vVYhuvfCcfc_N5JRlxvQ"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    <span class="text-primary font-bold text-xs tracking-widest uppercase mb-1">New Arrival</span>
+                    <h2 class="text-2xl font-bold text-white mb-2 leading-tight">Next-Gen RTX 4090<br/>Gaming Laptops</h2>
+                    <p class="text-white/70 text-sm mb-4">Ultimate performance for creators and gamers alike.</p>
+                    <div>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg shadow-primary/30" data-navigate="products">
+                            Shop Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Scroll -->
+        <section class="py-2">
+            <div class="flex items-center justify-between px-4 mb-3">
+                <h3 class="font-bold text-lg">Categories</h3>
+                <button class="text-primary text-sm font-medium" data-navigate="products">See All</button>
+            </div>
+            <div class="flex gap-4 overflow-x-auto px-4 pb-4 no-scrollbar">
+                <div class="flex-none flex flex-col items-center gap-2 group cursor-pointer category-item" data-category="laptops">
+                    <div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+                        <span class="material-icons-round text-primary">laptop</span>
+                    </div>
+                    <span class="text-xs font-medium">Laptops</span>
+                </div>
+                <div class="flex-none flex flex-col items-center gap-2 group cursor-pointer category-item" data-category="components">
+                    <div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+                        <span class="material-icons-round text-primary">settings_input_component</span>
+                    </div>
+                    <span class="text-xs font-medium">Components</span>
+                </div>
+                <div class="flex-none flex flex-col items-center gap-2 group cursor-pointer category-item" data-category="accessories">
+                    <div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+                        <span class="material-icons-round text-primary">keyboard</span>
+                    </div>
+                    <span class="text-xs font-medium">Accessories</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="py-4">
+            <div class="flex items-center justify-between px-4 mb-3">
+                <h3 class="font-bold text-lg">Featured Products</h3>
+                <button class="text-primary text-sm font-medium" data-navigate="products">View All</button>
+            </div>
+            <div id="featured-products" class="px-4 space-y-3">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <!-- PRODUCT LISTING PAGE -->
+    <div id="products-page" class="page">
+        <div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-40 flex items-center px-4 justify-between border-b border-primary/10">
+            <button class="text-primary flex items-center" data-navigate="home">
+                <span class="material-icons-round">chevron_left</span>
+                <span class="font-medium">Home</span>
+            </button>
+            <h1 class="text-lg font-bold">Products</h1>
+            <button class="text-primary text-sm font-medium">Filter</button>
+        </div>
+        <div class="p-4">
+            <div id="products-list" class="space-y-3">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL PAGE -->
+    <div id="product-detail-page" class="page">
+        <div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-40 flex items-center px-4 justify-between border-b border-primary/10">
+            <button class="text-primary flex items-center" data-navigate="products">
+                <span class="material-icons-round">chevron_left</span>
+                <span class="font-medium">Products</span>
+            </button>
+            <h1 class="text-lg font-bold">Details</h1>
+            <button class="text-primary text-sm font-medium" data-navigate="cart">Cart</button>
+        </div>
+        <div id="product-detail-content" class="p-4 space-y-4">
+            <!-- Product details will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- SHOPPING CART PAGE -->
+    <div id="cart-page" class="page">
+        <div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-40 flex items-center px-4 justify-between border-b border-primary/10">
+            <button class="text-primary flex items-center" data-navigate="home">
+                <span class="material-icons-round">chevron_left</span>
+                <span class="font-medium">Shop</span>
+            </button>
+            <h1 class="text-lg font-bold">Your Cart</h1>
+            <button class="text-primary text-sm font-medium">Edit</button>
+        </div>
+        <main class="flex-grow p-4 space-y-6 pb-40">
+            <section class="space-y-4">
+                <div class="flex justify-between items-end">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-primary/70">Items (<span id="cart-items-count">0</span>)</h2>
+                </div>
+                <div id="cart-items" class="space-y-3">
+                    <!-- Cart items will be loaded dynamically -->
+                </div>
+            </section>
+            <section class="space-y-3 pt-6 border-t border-primary/10">
+                <div class="flex justify-between font-medium">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="flex justify-between font-medium">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">$0.00</span>
+                </div>
+                <div class="flex justify-between font-bold text-lg pt-2 border-t border-primary/10">
+                    <span>Total</span>
+                    <span id="cart-total" class="text-primary">$0.00</span>
+                </div>
+            </section>
+        </main>
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-white dark:bg-background-dark border-t border-primary/10">
+            <button class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-medium transition-all" data-navigate="checkout">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- SECURE CHECKOUT PAGE -->
+    <div id="checkout-page" class="page">
+        <div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-40 flex items-center px-4 justify-between border-b border-primary/10">
+            <button class="text-primary flex items-center" data-navigate="cart">
+                <span class="material-icons-round">chevron_left</span>
+                <span class="font-medium">Cart</span>
+            </button>
+            <h1 class="text-lg font-bold">Checkout</h1>
+            <span></span>
+        </div>
+        <div class="p-4 space-y-6 pb-40">
+            <section class="space-y-4">
+                <h2 class="font-bold text-lg">Shipping Address</h2>
+                <div class="space-y-3">
+                    <input type="text" placeholder="Full Name" class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary/50"/>
+                    <input type="email" placeholder="Email" class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary/50"/>
+                    <input type="text" placeholder="Address" class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-lg py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary/50"/>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-bold text-lg">Payment Method</h2>
+                <div class="space-y-2">
+                    <label class="flex items-center gap-3 p-3 border border-primary/20 rounded-lg cursor-pointer hover:bg-primary/5">
+                        <input type="radio" name="payment" value="card" checked class="w-4 h-4"/>
+                        <span>Credit Card</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 border border-primary/20 rounded-lg cursor-pointer hover:bg-primary/5">
+                        <input type="radio" name="payment" value="paypal" class="w-4 h-4"/>
+                        <span>PayPal</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-bold text-lg">Order Summary</h2>
+                <div id="checkout-summary" class="space-y-3">
+                    <!-- Summary will be loaded dynamically -->
+                </div>
+            </section>
+        </div>
+
+        <div class="fixed bottom-0 left-0 right-0 p-4 bg-white dark:bg-background-dark border-t border-primary/10 space-y-3">
+            <div class="flex justify-between font-bold text-lg">
+                <span>Total</span>
+                <span id="checkout-total" class="text-primary">$0.00</span>
+            </div>
+            <button class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-medium transition-all" id="place-order-btn">
+                Place Order
+            </button>
+        </div>
+    </div>
+
+</main>
+
+<!-- Compiled JavaScript -->
+<script src="dist/app.js"></script>
+</body>
+</html>

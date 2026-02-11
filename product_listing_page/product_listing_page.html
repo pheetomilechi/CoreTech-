@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Listing - Components</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .ios-status-bar {
+            height: env(safe-area-inset-top, 44px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- iOS Status Bar Placeholder -->
+<div class="ios-status-bar bg-white dark:bg-background-dark sticky top-0 z-50"></div>
+<!-- Header & Navigation -->
+<header class="sticky top-[env(safe-area-inset-top,44px)] bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-40 border-b border-primary/10">
+<div class="px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons text-2xl">chevron_left</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Components</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons">search</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white relative">
+<span class="material-icons">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">3</span>
+</button>
+</div>
+</div>
+<!-- Breadcrumbs -->
+<div class="px-5 pb-2">
+<nav class="flex text-xs text-slate-500 dark:text-slate-400 gap-2 items-center">
+<span>Shop</span>
+<span class="material-icons text-[10px]">chevron_right</span>
+<span>Hardware</span>
+<span class="material-icons text-[10px]">chevron_right</span>
+<span class="text-primary font-medium">Graphics Cards</span>
+</nav>
+</div>
+</header>
+<main class="pb-24">
+<!-- Filter Bar -->
+<div class="sticky top-[108px] z-30 bg-background-light dark:bg-background-dark py-3 px-4 flex gap-3 overflow-x-auto hide-scrollbar border-b border-primary/5">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-full shadow-sm border border-primary/20 shrink-0">
+<span class="material-icons text-sm">tune</span>
+<span class="text-sm font-medium">Filters</span>
+</button>
+<div class="h-8 w-px bg-primary/20 self-center"></div>
+<button class="px-4 py-2 bg-primary text-white rounded-full text-sm font-medium shrink-0">
+                Graphics Cards
+            </button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 rounded-full text-sm font-medium shrink-0 border border-transparent">
+                Processors
+            </button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 rounded-full text-sm font-medium shrink-0 border border-transparent">
+                Motherboards
+            </button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 rounded-full text-sm font-medium shrink-0 border border-transparent">
+                Memory
+            </button>
+</div>
+<!-- Category Header -->
+<div class="px-4 py-6 flex justify-between items-end">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400">High-performance GPUs</p>
+<h2 class="text-2xl font-bold">New Arrivals</h2>
+</div>
+<div class="flex items-center gap-1 text-sm font-medium text-primary">
+<span>Price: Low to High</span>
+<span class="material-icons text-sm">expand_more</span>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="px-4 grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="NVIDIA RTX 4080 GPU" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="Powerful NVIDIA RTX 4080 graphics card hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC67gVYXzAWxUF6EI5J8CsWLOL_Een_oObbrEU9niiYDTZ0msIM3aLYWA53W_0vMrtD1OzF4cTf22cbUj_iTHKV1eZUYIALhm2yKX5qF7bNrObyJw5H2csq7imm2-CIR19yAF1K1nJFLFuEUn3mvwCXCRoqz_91p5P1Brfn5LpYRYAcYA_JlUjKgkPWLGLEQ1wxMNVLlBdBXiGq6jJcsT06D9gyU3QjIxB9XMcoRYP8M_r5gp1pbwKcWpcBV8XCZCN9AG_Aky8gBo"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">New</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-slate-400">
+<span class="material-icons text-lg">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">NVIDIA</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">GeForce RTX 4080 Founders Edition 16GB</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<p class="text-xs text-slate-400 line-through">$1,299.99</p>
+<p class="text-lg font-bold text-primary">$1,199.99</p>
+</div>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="AMD Ryzen Processor" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="AMD Ryzen 9 series processor chip" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOXWT2b2HVBCHPCgWNLbArPVoZjtHkFC7t1zVUtmJgvzfJ2BN9YccDbkP8jbsr8zqHLvFQ1gyiKYTRjf34ijE_tcvU-TKhW6M7tmqvoKNpINurE5aQtmgALBr4b4W0QnfTsZfU3BM_yFVEsr0tYg8tuBobo5H0obL4TlNxLoGeR15dz_qQX0k2fQMrunKCiRj1TuIhDpnCYRllvFUHic-Zc0drlZBTg6sipUahVY5jKFiYxZxvRAQ7ADYdVRpqI8LB8Go_Iu4b46Y"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-red-500">
+<span class="material-icons text-lg">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">AMD</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">Ryzen 9 7950X 16-Core 32-Thread</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<p class="text-lg font-bold text-primary">$549.00</p>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="Corsair Vengeance RAM" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="Corsair Vengeance DDR5 RGB memory sticks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs2DDiMRxESdvm5_w5GtG0LbJkz-FJGAPofuLlZXqeI-88XARlrJpJggFmAcEmISOGu8zPodGlJgHr4rzbT6_S3pqUrdRxOILrXZnNkhkIklJr6XJnvVpzjWsMNAv3zLhPqJzPUmh9zWzLaEAD-R4pbnxUnkJBztyX4kGUFOwFBILzZu6UeWjPEZmodiQKIJvFeBiYgkKEMBHz3q5NHorFMNhEt6bV9_pKwr5PGIKwR_4kflp2AHZEDO_m3Ltqt7bWr04lBePvuaU"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-slate-400">
+<span class="material-icons text-lg">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">Corsair</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">Vengeance RGB 32GB DDR5 6000MHz</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<p class="text-lg font-bold text-primary">$189.99</p>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="ASUS Motherboard" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="High-end ASUS ROG Strix motherboard layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxflvQmMvn7QJIYsNDUv863qISmYqAV2pt-KzhlTlvf_LIS7A2US38k-TBmL2SlNHPOgDL7FtzXMP8TdLY4yKTCqMqZ19iKfmQyPanCceGkJDnZkwY6fwwbHzCFfISGRVCWS_zUfem4ltC1X0ekqA0SlhVi4--fqHGUxVHo8pzqjFVNljn2I0RDyXCuhFtQpRv6MS1gh6fGIMQkpUl4Sn0G7yGiGeQVxPitafUyuGoF94ErXFGJ0jFEChBYrYp5lgbo9xKLS7TkYg"/>
+<span class="absolute top-2 left-2 bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Sale</span>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-slate-400">
+<span class="material-icons text-lg">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">ASUS</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">ROG Strix Z790-E Gaming WiFi</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<div>
+<p class="text-xs text-slate-400 line-through">$499.99</p>
+<p class="text-lg font-bold text-primary">$429.00</p>
+</div>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="SSD Storage" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="Samsung NVMe M.2 internal storage drive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBtRJQI_ZB9mFEmZVUotfae45PT8CH_eHXn1oBeZHNIQUkWTPDHQKuWV6LOCdDjnXW0ljABTqilyetmWqAGU7ehr3brJyTfZELJvazSoPJaiCAqWOY3oZeSjmK3HiXm2HLxkEO1LLnwnXsQ9I715GYP3KIRQn3muZ3wxA-_QfTL7cjUu3jfndI-BgOMQ-e3Go5U-6BEzBHpad7ezcyPfNeT-Yc2GvLBb7e7Y1efhAa0S8V-q177Dr1FRuKygsECcHHshmFWjbkDi0"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-slate-400">
+<span class="material-icons text-lg">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">Samsung</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">990 PRO 2TB NVMe Gen4 SSD</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<p class="text-lg font-bold text-primary">$179.99</p>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm flex flex-col group">
+<div class="relative aspect-square bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4">
+<img alt="EVGA Power Supply" class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300" data-alt="ATX power supply unit with cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWZpBmLIQQRt8s8wAEN2vCUo9C95Rlv4Crnep24RDB8x3BjJUoaG9knKeWBhQRrtDPA9W6UqSiN6mXkE8nHVzItPU68cQq1PZI-u61MClU7XzyELUQTyNJBFCaRiHp98ilFGMyF4osEaegNluWelM9nTZctap2nA79tCUHkq6xK9TXEz4xwQ-9XfppdofotE-rjdfHLbFsdovWcwsH1yK9oD6W_ZZRJo-COeoEnOsJ7cBvoZr-WSE4Y-cH3KDiRoUvmFbyu1UgY3M"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 dark:bg-slate-700/80 flex items-center justify-center text-slate-400">
+<span class="material-icons text-lg">favorite_border</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">EVGA</p>
+<h3 class="text-sm font-bold leading-tight mb-1 line-clamp-2">SuperNOVA 850 GT 80 Plus Gold</h3>
+<div class="mt-auto pt-2 flex items-center justify-between">
+<p class="text-lg font-bold text-primary">$134.99</p>
+<button class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center shadow-lg shadow-primary/30 active:scale-95 transition-all">
+<span class="material-icons">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="px-4 mt-8 flex flex-col items-center gap-4">
+<p class="text-sm text-slate-500">Showing 6 of 152 items</p>
+<div class="w-full h-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="w-[4%] h-full bg-primary"></div>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-bold rounded-xl active:bg-primary active:text-white transition-all">
+                Load More Components
+            </button>
+</div>
+</main>
+<!-- Bottom Filter Sheet (Simulated Modal - Hidden by default in logic but shown for UI) -->
+<!-- This would usually be toggled, but here it's prepared for the designer's review as a sticky footer component -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 shadow-[0_-8px_30px_rgb(0,0,0,0.12)] border-t border-primary/10 rounded-t-3xl p-6 z-50 transform translate-y-full translate-y-0 transition-transform hidden">
+<div class="w-12 h-1 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-6"></div>
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Filters</h3>
+<button class="text-primary font-medium">Reset All</button>
+</div>
+<div class="space-y-6 max-h-[60vh] overflow-y-auto pr-2">
+<!-- Price Range -->
+<section>
+<h4 class="font-bold mb-4">Price Range</h4>
+<div class="flex items-center gap-4">
+<div class="flex-1 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm">$0</div>
+<div class="w-4 h-0.5 bg-slate-300"></div>
+<div class="flex-1 px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm">$2,500</div>
+</div>
+</section>
+<!-- Brand Section -->
+<section>
+<h4 class="font-bold mb-3">Brand</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium">NVIDIA</span>
+<span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium">AMD</span>
+<span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium">ASUS</span>
+<span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium">MSI</span>
+<span class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium">Gigabyte</span>
+</div>
+</section>
+<!-- Compatibility -->
+<section>
+<h4 class="font-bold mb-3">Socket Compatibility</h4>
+<div class="space-y-3">
+<label class="flex items-center justify-between">
+<span class="text-sm">LGA 1700 (Intel 12/13th Gen)</span>
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between">
+<span class="text-sm">AM5 (AMD Ryzen 7000)</span>
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</label>
+</div>
+</section>
+</div>
+<button class="w-full mt-6 py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/40">
+            Show 152 Results
+        </button>
+</div>
+<!-- Bottom Tab Bar (iOS style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-primary/5 flex justify-around items-center px-4 py-3 z-40">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-medium">Store</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">category</span>
+<span class="text-[10px] font-medium">Categories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+<!-- Map Contextual Element (Required by instruction if used) -->
+<div class="hidden" data-location="San Francisco" style=""></div>
+</body></html>

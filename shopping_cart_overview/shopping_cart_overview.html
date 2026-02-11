@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-50 flex items-center px-6 justify-between border-b border-primary/10">
+<button class="text-primary flex items-center">
+<span class="material-icons-round">chevron_left</span>
+<span class="font-medium">Shop</span>
+</button>
+<h1 class="text-lg font-bold">Your Cart</h1>
+<button class="text-primary text-sm font-medium">Edit</button>
+</div>
+<!-- Main Content Container -->
+<main class="flex-grow p-4 space-y-6 pb-40">
+<!-- Cart Items Section -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary/70">Items (3)</h2>
+<span class="text-xs text-slate-500">Free shipping eligible</span>
+</div>
+<!-- Item 1 -->
+<div class="bg-white dark:bg-slate-900/50 p-3 rounded-xl shadow-sm border border-primary/5 flex gap-4">
+<div class="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-end graphics card with triple fans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcj8z8ZprSO67KxiHgpI0uxlFiq_cooM92dTVYWioA-sODYeO3xKRAJML-meIvmZCcdUskv9kFV1SVGtZ3uHQ3baJpMmeT0cjGQjlDQVDdcd4c7pir4UVzzz0h51awC7wg74DoPIQLA3xpFhI6Fdo7ggA_gUEzj5QkUYdvRz0tPVgxXVPVwtEpY0T4U0-Kkjd4gyD-3yn9i82bzfI4ZWNkMPPERj_GLH_Ol4EpzWV1Y7-79G9Ec-Lvl7aKelsl_6GhsFKnZfjw3g"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-sm leading-tight">NVIDIA RTX 4080 Super</h3>
+<p class="text-xs text-slate-500 mt-1">16GB GDDR6X • Black Edition</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">$1,199.00</span>
+<div class="flex items-center bg-background-light dark:bg-slate-800 rounded-lg border border-primary/10 p-1">
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-slate-900/50 p-3 rounded-xl shadow-sm border border-primary/5 flex gap-4">
+<div class="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="DDR5 RAM sticks with RGB lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDttSZuCQnoBnoSjPdz2NlLG0GdvUqYqXT6E5GEPaxYvwYQW1XA2cwVcPFLktGGN5AuRwFswpu6yFKMNOzflaiW8qPOjnYh4nFf2fZm5ZfiSe9gYpaWVc3r8q6tgyu-zAiBlg9o22AOEQhhSBgT9I3knm2EDBPOX001YEoZYcdN7DXlT7TILufFaYHe7e8uG3oKQ4965jSbG-jshbuz9eTV7Jn5umUzekTCJDhm9CKRUkGV5bx8oN59fgPb7pf1lq97_35irD_TZV0"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-sm leading-tight">64GB DDR5 RGB RAM Kit</h3>
+<p class="text-xs text-slate-500 mt-1">6000MHz • CL30 • Dual Channel</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">$249.99</span>
+<div class="flex items-center bg-background-light dark:bg-slate-800 rounded-lg border border-primary/10 p-1">
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white dark:bg-slate-900/50 p-3 rounded-xl shadow-sm border border-primary/5 flex gap-4">
+<div class="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-lg flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="M.2 NVMe SSD storage drive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB24NsRsrsVz4JgcZ2eGeqf2sXRkZpD3OJSdjIkHAsPwLqyUow33qg7Ujs-cYbVz9moV1dRpMjGMKDxLksX0pQO5DCVBfiM8mL2osQhK_huqB-voUqMMUOxUK7ITNKTHjotBCy5aBty7lahlEBQYlpApb30PQhqjpuR_pWFV6LQdGH51Uq9SewQd-an9lZL1ZjNjTbSAmv8c1lrPgWC8JUe7gn7s5WG43T3L7pYV4trNggQp7Hizoo1v8wqY2h30Y7xIe4dRhFf95Q"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-bold text-sm leading-tight">2TB Gen5 NVMe SSD</h3>
+<p class="text-xs text-slate-500 mt-1">Up to 12,400MB/s Read</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-primary">$189.50</span>
+<div class="flex items-center bg-background-light dark:bg-slate-800 rounded-lg border border-primary/10 p-1">
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">remove</span></button>
+<span class="px-3 text-sm font-bold">2</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary"><span class="material-icons-round text-sm">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Saved for Later Section -->
+<section class="mt-8 space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary text-xl">bookmark_border</span>
+<h2 class="text-lg font-bold">Saved for Later</h2>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Saved Item 1 -->
+<div class="bg-white/50 dark:bg-slate-900/30 p-3 rounded-xl border border-dashed border-primary/20">
+<img class="w-full h-24 object-cover rounded-lg mb-2 opacity-80" data-alt="Mechanical gaming keyboard with backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY_yPuxAcCY766hFcsGN6nhK0UBYzoNl0em8QJLYLkfi_KOVWbELQyg2ZlhD5P8-tRNHsLR9dbZj6n6mNpKySVg7kmtxj3XKksYZ2vBV2Y-N9phd0KnxSCIPSUHAvaJNS7zvYX2UQBOMYxSTWg9wo93TX05JKFf4B244paji-YQAbpjjPKCnIZkzzTBmu15pQgkqal8t8qB0FcDWPiNpnO887VQZ_-Mxs7Djq7gOoosz5qY75dI1JCUIWFQpPugS-o7Rpl6ad6uqE"/>
+<h4 class="text-xs font-bold truncate">Wireless Mechanical Keyboard</h4>
+<p class="text-xs font-bold text-primary mb-2">$129.00</p>
+<button class="w-full py-2 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-lg">Move to Cart</button>
+</div>
+<!-- Saved Item 2 -->
+<div class="bg-white/50 dark:bg-slate-900/30 p-3 rounded-xl border border-dashed border-primary/20">
+<img class="w-full h-24 object-cover rounded-lg mb-2 opacity-80" data-alt="Large curved gaming monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8j_jHLlTrvxeQ5qIBMe7KL3JrH7bHJyUMc6_o8FfZJtpY0wnuKG7iv1fjOCREVzlcadApqSy5N5wQhSFG9trjlsjWCko94T1BNsJ3HibqQDZZdSMqvNyAHtBgiZeivdE0MEIfoG0ZvdnpHVZ_RRy9PMiPljTrnHZvEl6ViZkQDYefRr0d_1WI-npilDv-SVZM8F8YHtLYZyTCk3-oLUJUdSmtlBKwwTtYFL7O5KLyRx5HnzyO5eIbpfrXFDliendd_pl5E7oAHE8"/>
+<h4 class="text-xs font-bold truncate">34" Ultrawide OLED</h4>
+<p class="text-xs font-bold text-primary mb-2">$899.99</p>
+<button class="w-full py-2 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-lg">Move to Cart</button>
+</div>
+</div>
+</section>
+<!-- Recommendations/Add-ons -->
+<section class="mt-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-icons-round text-primary text-lg">verified_user</span>
+<span class="text-xs font-bold">Extend Your Warranty?</span>
+</div>
+<p class="text-[11px] text-slate-500 mb-3">Add 3-year accidental damage protection for your hardware for only $49.00.</p>
+<button class="text-primary text-xs font-bold underline">Add protection plan</button>
+</section>
+</main>
+<!-- Sticky Summary & Checkout Footer (iOS Style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-primary/10 px-6 pt-4 pb-8 space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-sm text-slate-500">
+<span>Subtotal</span>
+<span>$1,827.99</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500">
+<span>Shipping</span>
+<span class="text-green-500 font-medium">FREE</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500">
+<span>Estimated Tax</span>
+<span>$146.24</span>
+</div>
+<div class="flex justify-between text-xl font-bold pt-2">
+<span>Total</span>
+<span class="text-primary">$1,974.23</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span>Proceed to Checkout</span>
+<span class="material-icons-round">arrow_forward</span>
+</button>
+<!-- iOS Home Indicator Space -->
+<div class="h-1 w-32 bg-slate-300 dark:bg-slate-700 mx-auto rounded-full mt-2"></div>
+</div>
+</body></html>

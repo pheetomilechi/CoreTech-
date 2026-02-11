@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC Store Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="px-4 py-3 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons-round text-white text-xl">memory</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight">CORE<span class="text-primary">TECH</span></h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons-round">person_outline</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 transition-colors relative">
+<span class="material-icons-round">shopping_bag</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-primary text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white dark:border-background-dark">3</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search components, laptops..." type="text"/>
+</div>
+</div>
+</header>
+<main class="pb-24">
+<!-- Hero Banner -->
+<section class="px-4 py-4">
+<div class="relative h-64 w-full rounded-2xl overflow-hidden shadow-xl shadow-primary/10">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Modern gaming laptop with RGB lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2PXOJ9OuTPH0JNuFM_K8tM9jA2dFsneHDNTZH_ZrDwcfovhnC9tMJD302hqLj5sClvY6qD6RGJJCQSqkS_OUg3k39tnX_TOlGmon7Y7lNUFPc1LBoo2M4Hik2-k29RDnekdSCTnNwBLn-Yhvd0dNbZveOo0s_VD90sNAWCgcuE7ai6UiOrEd3_TmZ6GH8ecs7x6E3y3s6MhSjDYaZhHSWpi4MfzxBhYbov9hPnNw1w--6xg4hefuDcU5vVYhuvfCcfc_N5JRlxvQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+<span class="text-primary font-bold text-xs tracking-widest uppercase mb-1">New Arrival</span>
+<h2 class="text-2xl font-bold text-white mb-2 leading-tight">Next-Gen RTX 4090<br/>Gaming Laptops</h2>
+<p class="text-white/70 text-sm mb-4">Ultimate performance for creators and gamers alike.</p>
+<div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg shadow-primary/30">
+                            Shop Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Scroll -->
+<section class="py-2">
+<div class="flex items-center justify-between px-4 mb-3">
+<h3 class="font-bold text-lg">Categories</h3>
+<button class="text-primary text-sm font-medium">See All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto px-4 pb-4 no-scrollbar">
+<!-- Category Item -->
+<div class="flex-none flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-icons-round text-primary">laptop</span>
+</div>
+<span class="text-xs font-medium">Laptops</span>
+</div>
+<!-- Category Item -->
+<div class="flex-none flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-icons-round text-primary">settings_input_component</span>
+</div>
+<span class="text-xs font-medium">Parts</span>
+</div>
+<!-- Category Item -->
+<div class="flex-none flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-icons-round text-primary">monitor</span>
+</div>
+<span class="text-xs font-medium">Monitors</span>
+</div>
+<!-- Category Item -->
+<div class="flex-none flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-icons-round text-primary">mouse</span>
+</div>
+<span class="text-xs font-medium">Peripherals</span>
+</div>
+<!-- Category Item -->
+<div class="flex-none flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-icons-round text-primary">memory</span>
+</div>
+<span class="text-xs font-medium">CPU</span>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-4 py-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-lg">Featured Products</h3>
+<div class="flex gap-2">
+<span class="material-icons-round text-slate-300">grid_view</span>
+<span class="material-icons-round text-primary">list</span>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="relative bg-background-light dark:bg-slate-900 rounded-xl mb-3 overflow-hidden aspect-square flex items-center justify-center">
+<img class="w-4/5 h-4/5 object-contain" data-alt="High-end graphics card with cooling fans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgwNLwM0sZbaR8nLJ8GE5ysLbAs35WtTk-Wl4UaK8P_ZpTbNUaWeq5T-0lrbUuxSkT7QpU_xJnsqo-KWGyOIMZpNJklX2BCMESdUSOgmWLgtR6XkZh3ajwFaJ1HnIitHj2te19eniIf3JZZR7-d9GfrRFLjrxRK9dacXFfb5mareHdeZeMMLnKJ7cAEE0GzqMC-uWsEyW2fGI9iYKShjp0kjz1Muxmag6wrTXGovyexB0HWyKi0NtrWS-dAzyKZKbBdUioKo1SYM"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-full text-slate-400">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<h4 class="text-xs font-medium text-slate-500 mb-1">GPU</h4>
+<p class="font-bold text-sm leading-tight mb-2 line-clamp-2">GeForce RTX 4090 OC Edition 24GB</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-icons-round text-xs text-yellow-400">star</span>
+<span class="text-[10px] font-bold">4.9</span>
+<span class="text-[10px] text-slate-400">(128)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold text-lg">$1,599</span>
+<button class="bg-primary text-white w-8 h-8 rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="relative bg-background-light dark:bg-slate-900 rounded-xl mb-3 overflow-hidden aspect-square flex items-center justify-center">
+<img class="w-4/5 h-4/5 object-contain" data-alt="Powerful CPU processor with gold pins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCWWUlwMeY2WCidDJkfwL9qe9dxYgUgS14DvMT8Bjr49N-p96GfVcLWBfwlBQnbE2WSve1m77BjoWM-Vk1njbcAtzOUdVctdE4UmKfxNoLs0W6TSZZgDcW98_D_xQcV0mHhp1qlfVNhbjrFe2MJtB1Hux7uYrED-GbAd5KWBj8w7ru5TcMxYWW64rf8-oEVNpw5QTaf68kEoDC622SJZ-ZoFbBpate4vwaN6UJtMX4qK783DRDLmMx5wZEQubGxFcCCRBYT7sO31c"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-full text-slate-400">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<h4 class="text-xs font-medium text-slate-500 mb-1">Processors</h4>
+<p class="font-bold text-sm leading-tight mb-2 line-clamp-2">AMD Ryzen 9 7950X3D 16-Core</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-icons-round text-xs text-yellow-400">star</span>
+<span class="text-[10px] font-bold">5.0</span>
+<span class="text-[10px] text-slate-400">(84)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold text-lg">$699</span>
+<button class="bg-primary text-white w-8 h-8 rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="relative bg-background-light dark:bg-slate-900 rounded-xl mb-3 overflow-hidden aspect-square flex items-center justify-center">
+<img class="w-4/5 h-4/5 object-contain" data-alt="Ultra-wide curved gaming monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBqP0ZyoFolv2MyTjxWbi_fQGdyYf4JDaPzGisRBy71Grswz6R-Lk-2u9bJowKJsdPYRAvGShLtYqlK2icjVYn8bnD7OZ6-KQxdPZqv0p29Eq_6N2DGrspXEKsUdb670RHPL1gT_pFf73UJrzwdraxn30UXfeReaNh9NmJdWN5OfRKDyS6HbcJ987bVD7KkyylC5SqHIEuu01Sv2yLNRIFo8d27HQFFWhKt2gqIOIXEMNoj9xvGFBnSueysFLYunLEl8voYZoYa9E"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-full text-slate-400">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<h4 class="text-xs font-medium text-slate-500 mb-1">Monitors</h4>
+<p class="font-bold text-sm leading-tight mb-2 line-clamp-2">49" Odyssey G9 OLED Gaming Monitor</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-icons-round text-xs text-yellow-400">star</span>
+<span class="text-[10px] font-bold">4.8</span>
+<span class="text-[10px] text-slate-400">(45)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold text-lg">$1,299</span>
+<button class="bg-primary text-white w-8 h-8 rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Product Card -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-3 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="relative bg-background-light dark:bg-slate-900 rounded-xl mb-3 overflow-hidden aspect-square flex items-center justify-center">
+<img class="w-4/5 h-4/5 object-contain" data-alt="Mechanical gaming keyboard with RGB" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCssvCJ_ydkAdHpBoSbTuV5v7p1bheQHIwW98go4Wrkj8mgfedruB63teb9NRmOwZHFZ1ScsHJ94kEbXStZhk_9WIXTBGL8RuSe8YPDOHwKbsTU9qAd7CiZbneJzGER9thzZY46KXl1LxOmgvUun5_W4Qto_hPXUXnr9HXdmLmH0r-fNxJH3LzNnxUToRfQVfm47wGGYADZ9jasUO5rKAAS5vfJz4fYSnvlWB9oT2txpodt5JZYPSzB-ppxjvp91Nj6_flbzD6CEa0"/>
+<button class="absolute top-2 right-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur rounded-full text-slate-400">
+<span class="material-icons-round text-sm">favorite_border</span>
+</button>
+</div>
+<h4 class="text-xs font-medium text-slate-500 mb-1">Accessories</h4>
+<p class="font-bold text-sm leading-tight mb-2 line-clamp-2">Mechanical RGB Pro Keyboard</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-icons-round text-xs text-yellow-400">star</span>
+<span class="text-[10px] font-bold">4.7</span>
+<span class="text-[10px] text-slate-400">(210)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold text-lg">$149</span>
+<button class="bg-primary text-white w-8 h-8 rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Banner Ad -->
+<section class="px-4 py-4">
+<div class="bg-primary/10 rounded-2xl p-6 flex items-center justify-between border border-primary/20">
+<div class="max-w-[60%]">
+<h4 class="font-bold text-lg leading-tight mb-2">Build Your Own Rig</h4>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-4">Use our PC configurator to build your dream machine.</p>
+<button class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-lg">Get Started</button>
+</div>
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons-round text-5xl">build_circle</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-primary/10 px-6 py-4 pb-8 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">category</span>
+<span class="text-[10px] font-medium">Categories</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">favorite_border</span>
+<span class="text-[10px] font-medium">Wishlist</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">notifications_none</span>
+<span class="text-[10px] font-medium">Deals</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

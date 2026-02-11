@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Product Detail Page - Apex Pro TKL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<!-- Top Navigation Bar (iOS Style) -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 h-16">
+<button class="w-10 h-10 flex items-center justify-start text-slate-700 dark:text-slate-300">
+<span class="material-icons-outlined">arrow_back_ios</span>
+</button>
+<span class="font-semibold text-sm uppercase tracking-widest text-slate-500">Hardware Pro</span>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-slate-300">
+<span class="material-icons-outlined">share</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-slate-700 dark:text-slate-300 relative">
+<span class="material-icons-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-16 pb-32">
+<!-- Image Gallery Carousel -->
+<section class="relative w-full aspect-square bg-white dark:bg-slate-900 overflow-hidden">
+<div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar">
+<div class="flex-none w-full h-full snap-center">
+<img alt="Product Image 1" class="w-full h-full object-cover" data-alt="Modern black mechanical keyboard with RGB lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxpd5LvViALmCFITzuYKqIEhraY2NWZ5onRWSJnASDSkbqffn2tSNL3RkUiFTx9WdwP_4gKG03gB3Rk8AIuaUv6MmSpH3DnF_7SmEZkg6L7eRUM8q13ZFzJnnW-Sp7l_rGq0AkXtp6JhWQWoIZ9q6h5ygBIu-UI9NZOVr8ikhqyA4hBdCIouJROXfiYeSxr1TX-BcxvaPjBqcpyK1JBcIQg0ASYC80JVv63MYeWlHWASp6zllKjZRlBG7o339jS_lafIkHLxUQJw0"/>
+</div>
+<div class="flex-none w-full h-full snap-center">
+<img alt="Product Image 2" class="w-full h-full object-cover" data-alt="Side profile of mechanical keyboard switches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4nYjudE31TFgrJKwRPqlpkpaNsIn_bOpJJyDarg4KlDHkSxlUuhohP3Alf-nEcyIdZaEMA8PvAmiMAMmABEPqVSnbMSdkgQuF7ilzbtMLCLSLlV4lW-Xo2oXqnrfrsY-dbb-LDGHURdotgL_C2tVS_TRr7sAxHXduyeJu-vJzySSmqD1Wb5UFfooI1YawGsWpv-SHlNsTMqxLT6drtyK-3s251XD8wPE6NWm9pFXGSgcEH31x_Mf1GA7SqPhEVn-MrSj4nooVwjc"/>
+</div>
+</div>
+<!-- Pagination Indicator -->
+<div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">Best Seller</span>
+</div>
+</section>
+<!-- Product Details -->
+<section class="px-5 py-6">
+<div class="flex justify-between items-start mb-2">
+<h1 class="text-2xl font-bold leading-tight max-w-[80%]">Apex Pro TKL Wireless Mechanical Keyboard</h1>
+<button class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-400">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex text-yellow-400">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star_half</span>
+</div>
+<span class="text-xs font-medium text-slate-500">(128 Reviews)</span>
+</div>
+<div class="flex items-baseline gap-3 mb-6">
+<span class="text-3xl font-bold text-primary">$199.99</span>
+<span class="text-slate-400 line-through text-sm">$249.99</span>
+<span class="text-green-500 text-xs font-semibold bg-green-500/10 px-2 py-0.5 rounded">SAVE 20%</span>
+</div>
+<!-- Chips / Highlights -->
+<div class="flex flex-wrap gap-2 mb-8">
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
+<span class="material-icons-outlined text-primary text-sm">keyboard</span>
+<span class="text-xs font-semibold text-primary">Mechanical</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
+<span class="material-icons-outlined text-primary text-sm">palette</span>
+<span class="text-xs font-semibold text-primary">Per-Key RGB</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
+<span class="material-icons-outlined text-primary text-sm">wifi</span>
+<span class="text-xs font-semibold text-primary">Wireless</span>
+</div>
+</div>
+<!-- Configuration -->
+<div class="space-y-6">
+<div>
+<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Switch Type</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="border-2 border-primary bg-primary/5 p-3 rounded-xl text-center">
+<div class="w-3 h-3 rounded-full bg-red-500 mx-auto mb-1"></div>
+<span class="text-xs font-bold block">Red Linear</span>
+</button>
+<button class="border border-slate-200 dark:border-slate-800 p-3 rounded-xl text-center">
+<div class="w-3 h-3 rounded-full bg-blue-500 mx-auto mb-1"></div>
+<span class="text-xs font-medium block">Blue Clicky</span>
+</button>
+<button class="border border-slate-200 dark:border-slate-800 p-3 rounded-xl text-center">
+<div class="w-3 h-3 rounded-full bg-orange-400 mx-auto mb-1"></div>
+<span class="text-xs font-medium block">Brown Tactile</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between py-4 border-y border-slate-200 dark:border-slate-800">
+<div>
+<span class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Quantity</span>
+<div class="flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button class="w-8 h-8 flex items-center justify-center text-slate-500"><span class="material-icons-outlined text-lg">remove</span></button>
+<span class="w-10 text-center font-bold">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary"><span class="material-icons-outlined text-lg">add</span></button>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-[10px] text-green-500 font-bold uppercase mb-1">Status</span>
+<div class="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-sm font-semibold">In Stock (Fast Shipping)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="mt-4 px-5">
+<h2 class="text-lg font-bold mb-4">Technical Specifications</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-2 border-b border-slate-100 dark:border-slate-800">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-xs font-bold text-slate-500 uppercase">Actuation</div>
+<div class="p-4 text-sm">0.2mm to 3.8mm</div>
+</div>
+<div class="grid grid-cols-2 border-b border-slate-100 dark:border-slate-800">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-xs font-bold text-slate-500 uppercase">Polling Rate</div>
+<div class="p-4 text-sm">1000 Hz / 1ms</div>
+</div>
+<div class="grid grid-cols-2 border-b border-slate-100 dark:border-slate-800">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-xs font-bold text-slate-500 uppercase">Connectivity</div>
+<div class="p-4 text-sm">USB-C, 2.4GHz, BT 5.0</div>
+</div>
+<div class="grid grid-cols-2">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 text-xs font-bold text-slate-500 uppercase">Battery Life</div>
+<div class="p-4 text-sm">Up to 40 Hours (RGB On)</div>
+</div>
+</div>
+<button class="w-full mt-4 text-primary text-sm font-bold flex items-center justify-center gap-1">
+                View All Specs <span class="material-icons-outlined text-sm">expand_more</span>
+</button>
+</section>
+<!-- User Reviews -->
+<section class="mt-10 px-5">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-lg font-bold">Reviews</h2>
+<button class="text-primary text-sm font-bold">Write a review</button>
+</div>
+<!-- Review Card 1 -->
+<div class="mb-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
+<div>
+<p class="text-sm font-bold">John Doe</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tight">Verified Purchaser</p>
+</div>
+</div>
+<div class="text-yellow-400 flex">
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+</div>
+</div>
+<h3 class="text-sm font-bold mb-1">Game changer for Valorant</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    The rapid trigger feature is absolutely insane. My strafing improved immediately. Build quality is top notch.
+                </p>
+</div>
+<!-- Review Card 2 -->
+<div class="mb-6 pb-6">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-600 font-bold">AS</div>
+<div>
+<p class="text-sm font-bold">Alice S.</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tight">Verified Purchaser</p>
+</div>
+</div>
+<div class="text-yellow-400 flex">
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs">star</span>
+<span class="material-icons-outlined text-xs text-slate-300 dark:text-slate-700">star</span>
+</div>
+</div>
+<h3 class="text-sm font-bold mb-1">Best TKL board so far</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Software is a bit clunky but the hardware makes up for it. RGB is beautiful and the OLED screen is a nice touch.
+                </p>
+</div>
+<button class="w-full py-4 bg-slate-200 dark:bg-slate-800 rounded-xl text-sm font-bold">
+                Read all 128 reviews
+            </button>
+</section>
+<!-- Recommended / Related -->
+<section class="mt-10 px-5">
+<h2 class="text-lg font-bold mb-4">Complete your setup</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-5 px-5 pb-4">
+<div class="min-w-[160px] bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<img alt="Mouse" class="w-full aspect-square object-cover rounded-lg mb-3" data-alt="Modern ergonomic gaming mouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3nMhfadSEHcYThLEDjXpVwxKNokLff4rzBgsVfGlKTwP91PCvI5LK7k0OI89T7ZvGnqEx2p2SdlBlrtJ17AAr61CAt3rCRgsgW747c2-9xBiG8J_w7PTZFeKUcmeeZ7jK53-Al036JCd_L3kZ6v7BtKrVXw3zU4t6fpLMhcYx4hABbmQ2slSJ-lY8kku6GuXSoxNGQzlP0vlGtzI0gwvp1HeSS9u7Bqoo5BNWU21EphCsLUQoT4xgsG9gLi_Gmgn5bAf1Aq_XNFg"/>
+<p class="text-xs font-bold mb-1 truncate">Pro Mouse G7</p>
+<p class="text-sm font-bold text-primary">$89.00</p>
+</div>
+<div class="min-w-[160px] bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<img alt="Mat" class="w-full aspect-square object-cover rounded-lg mb-3" data-alt="Extra large black desk mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCkDRg3xAJ4AqATNTT1X04-Zx3HFb8qn-osnZ-8u3GsygDy3zgRz8MSZ9q2xl-zy7CRq06s_MMIioqhNHhZLoyjZ1Z_XugYzp5ZBZqfCugCu_gpZOZOtf8pOGHs-vVermMNbfvzB5_fUAFSSVXv2DkxjeIsbmhNJGPcbycpMt8-GQerE6y4KRyaqL8YTD3zPhtFfD3mHkPWGYYyoGF-8aGqg0fREUKRr0nSVW2X4TCIQ8mVGQ09gpz2EPy4uKAHB2ZuUSuKG21V5E"/>
+<p class="text-xs font-bold mb-1 truncate">Extended Desk Mat</p>
+<p class="text-sm font-bold text-primary">$29.00</p>
+</div>
+<div class="min-w-[160px] bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+<img alt="Wrist Rest" class="w-full aspect-square object-cover rounded-lg mb-3" data-alt="Leather keyboard wrist rest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQwGV4aYr-u6ZTW_wnn8hNxklnBd4K1ReMQzQnKZQra_CtQrRGUDstqC_-z_nt-UpGkhjWTE0y5ar2R_lkVtNu5g_JwpLT2qwswgX19kFlomHHzVQ6urfWGgNQnnIlAYbxNpN7AnKhmHR0eOXt5IidmSpmvCb7NUAcz9QiVefodpSZsTNI16hyFKXlVyHqo2XuYjmcIvibh9QlGtRg67pyJT_Ekx8_eRQLT7piBLyZjuPRSnBRf4OhFnVT2vN1KU9dJaME5rTfKY"/>
+<p class="text-xs font-bold mb-1 truncate">Memory Foam Rest</p>
+<p class="text-sm font-bold text-primary">$19.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 p-5 z-50">
+<div class="max-w-md mx-auto flex items-center gap-4">
+<div class="flex-1">
+<button class="w-full bg-primary text-white h-14 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons-outlined">shopping_cart</span>
+                    Add to Cart
+                </button>
+</div>
+<button class="w-14 h-14 border-2 border-slate-200 dark:border-slate-800 rounded-xl flex items-center justify-center text-slate-700 dark:text-slate-300 active:scale-95 transition-transform">
+<span class="material-icons-outlined">bolt</span>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS -->
+<div class="h-4"></div>
+</div>
+</body></html>
